@@ -1,0 +1,10 @@
+Sub UnprotectForVBA()
+'
+' Unprotect all worksheets
+'
+    Dim wSheet As Worksheet
+    For Each wSheet In Worksheets
+        wSheet.Unprotect Password:="password"
+    Next wSheet
+    
+End Sub
