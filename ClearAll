@@ -1,0 +1,40 @@
+'
+' ClearAll Macro
+'
+Call UnprotectForVBA
+' clear WEEKSTAAT
+    Dim ws As Worksheet
+    Set ws = Sheets("Weekstaat")
+    '   clear WP list
+    ws.Range("C3:D27").ClearContents
+    '   clear monday
+    ws.Range("E3:AC27").ClearContents
+    Selection.Interior.Color = 11854022
+    '   clear Tuesday
+    ws.Range("E29:AC53").ClearContents
+    Selection.Interior.Color = 11854022
+    '   clear Wednesday
+    ws.Range("E55:AC79").ClearContents
+    Selection.Interior.Color = 11854022
+    '   clear Thursday
+    ws.Range("E81:AC105").ClearContents
+    Selection.Interior.Color = 11854022
+    '   clear Friday
+    ws.Range("E107:AC131").ClearContents
+    Selection.Interior.Color = 11854022
+
+' clear WP SHEETS
+    Dim wp As Worksheet
+    For Each wp In Worksheets
+        wp.Activate
+        If wp.Name Like "WP*" Then
+            Range("A36:N70").ClearContents
+            ActiveWindow.ScrollRow = 1
+            ActiveWindow.ScrollColumn = 1
+            Range("A36").Activate
+        End If
+    Next wp
+
+Call ProtectForVBA
+    ws.Activate
+    Range("C3").Activate
