@@ -9,19 +9,19 @@ Call UnprotectForVBA
     ws.Range("C3:D27").ClearContents
     '   clear monday
     ws.Range("E3:AC27").ClearContents
-    Selection.Interior.Color = 11854022
+    ws.Range("E3:AC27").Interior.Color = 11854022
     '   clear Tuesday
     ws.Range("E29:AC53").ClearContents
-    Selection.Interior.Color = 11854022
+    ws.Range("E29:AC53").Interior.Color = 11854022
     '   clear Wednesday
     ws.Range("E55:AC79").ClearContents
-    Selection.Interior.Color = 11854022
+    ws.Range("E55:AC79").Interior.Color = 11854022
     '   clear Thursday
     ws.Range("E81:AC105").ClearContents
-    Selection.Interior.Color = 11854022
+    ws.Range("E81:AC105").Interior.Color = 11854022
     '   clear Friday
     ws.Range("E107:AC131").ClearContents
-    Selection.Interior.Color = 11854022
+    ws.Range("E107:AC131").Interior.Color = 11854022
 
 ' clear WP SHEETS
     Dim wp As Worksheet
